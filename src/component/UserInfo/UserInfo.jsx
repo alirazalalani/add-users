@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import ErrorModal from "../UI/ErrorModal";
 import "./UserInfo.css";
 const UserInfo = (props) => {
-  const [usernames, setUserName] = useState([]);
-  const [ages, setAge] = useState([]);
+  const [usernames, setUserName] = useState("");
+  const [ages, setAge] = useState("");
   const [error, setError] = useState();
   const changeUserName = (e) => {
     setUserName(e.target.value);
