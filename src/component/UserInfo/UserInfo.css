@@ -1,0 +1,84 @@
+.user-interface {
+  background-color: white;
+  color: black;
+  width: 30%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+}
+form {
+  background-color: white;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.user-interface__name {
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+.user-interface__name label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  background-color: white;
+}
+.user-interface__name input {
+  padding: 0.2rem;
+  border: 1px solid rgb(228, 220, 220);
+  background-color: white;
+}
+.user-interface__age {
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 5px; */
+  background-color: white;
+}
+.user-interface__age label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  background-color: white;
+}
+.user-interface__age input {
+  padding: 0.2rem;
+  border: 1px solid rgb(228, 220, 220);
+  background-color: white;
+}
+
+.user-interface__button {
+  margin-top: 15px;
+  background-color: white;
+}
+.user-interface__button button {
+  padding: 0.35rem;
+  font-weight: bold;
+  width: 20%;
+  background-color: rgb(95, 36, 95);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 1189px) {
+  .user-interface__button button {
+    padding: 0.35rem;
+    font-weight: bold;
+    width: 40%;
+    background-color: rgb(95, 36, 95);
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+}
+@media (max-width: 683px) {
+  .user-interface__button button {
+    padding: 0.35rem;
+    font-weight: bold;
+    width: 100%;
+    background-color: rgb(95, 36, 95);
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+}

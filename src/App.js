@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import UserInfo from "./component/UserInfo/UserInfo";
+import UserItem from "./component/UserInfo/UserItem";
 
-function App() {
+const App = () => {
+  const [userAges, setUserAge] = useState([]);
+  const AllDetails = (data) => {
+    setUserAge((prevData) => {
+      return [data, ...prevData];
+    });
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <UserInfo onClickHandler={AllDetails} />
+      {userAges.map((userAge) => {
+        return <UserItem items={userAge} key={userAge.id} />;
+      })}
     </div>
   );
-}
+};
 
 export default App;
